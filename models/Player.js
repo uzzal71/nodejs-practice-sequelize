@@ -10,6 +10,10 @@ const Player = sequelize.define('Player', {
             key: 'id'
         },
         allowNull: false
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 });
 
