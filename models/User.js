@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from '../config/sequelize';
+import Address from "./Address";
 
 const User = sequelize.define('User', {
     name: {
@@ -17,5 +18,10 @@ const User = sequelize.define('User', {
         unique: true
     }
 });
+
+User.hasOne(Address, {
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE'
+})
 
 export default User;
