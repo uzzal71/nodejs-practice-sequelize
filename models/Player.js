@@ -13,4 +13,11 @@ const Player = sequelize.define('Player', {
     }
 });
 
+Player.belongsTo(Team, {
+    foreignKey: {
+        name: 'team_id',
+        allowNull: false
+    }
+})
+
 export default Player;
