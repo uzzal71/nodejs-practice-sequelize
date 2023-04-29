@@ -14,6 +14,10 @@ const Player = sequelize.define('Player', {
     name: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    phone: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 });
 
