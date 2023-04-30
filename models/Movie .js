@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/sequelize";
+import Actor from "./Actor";
 
 const Movie = sequelize.define('Movie', {
     name: {
@@ -9,6 +10,10 @@ const Movie = sequelize.define('Movie', {
 }, {
     tableName: 'movies',
     timestamps: true
+});
+
+Movie.belongsToMany(Actor, {
+    through: 'actor_movies'
 });
 
 export default Movie;
