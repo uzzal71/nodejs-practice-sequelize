@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/sequelize";
 
-const ActorMovies = sequelize.define('ActorMovies', {});
+const ActorMovie = sequelize.define('ActorMovie', {});
 
-export default ActorMovies;
+export default ActorMovie;
