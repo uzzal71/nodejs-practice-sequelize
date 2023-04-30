@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/sequelize";
 import Movie from "./Movie ";
+import ActorMovie from "./ActorMovie";
 
 const Actor = sequelize.define('Actor', {
     name: {
@@ -13,7 +14,7 @@ const Actor = sequelize.define('Actor', {
 });
 
 Actor.belongsToMany(Movie, {
-    through: 'actor_movies'
+    through: ActorMovie
 });
 
 export default Actor;
