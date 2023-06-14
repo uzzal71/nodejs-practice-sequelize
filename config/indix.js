@@ -12,5 +12,6 @@ config.DB_DATABASE = process.env.DB_DATABASE;
 config.DB_USERNAME = process.env.DB_USERNAME;
 config.DB_PASSWORD = process.env.DB_PASSWORD;
 config.DB_DIALECT = process.env.DB_DIALECT;
+config.API_URL = process.env.API_URL;
 
 export default config;
